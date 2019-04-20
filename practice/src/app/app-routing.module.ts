@@ -19,6 +19,10 @@ const routes: Routes = [
     loadChildren: './ageless/ageless.module#AgelessModule'
   },
   {
+    path: 'clickurl',
+    loadChildren: './clickurl/clickurl.module#ClickurlModule'
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full'

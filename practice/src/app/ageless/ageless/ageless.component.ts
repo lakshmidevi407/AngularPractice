@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { Arraysbindings } from '../../../common/binding';
 import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
@@ -17,6 +17,7 @@ export interface agelessinterface {
     { provide: ToastrService }]
 })
 export class AgelessComponent implements OnInit {
+  @Input() showhideageless: boolean;
   public selectagefrmarray: any[] = [];
   public heightarray = [];
   public partnerpreferenceobj: agelessinterface;

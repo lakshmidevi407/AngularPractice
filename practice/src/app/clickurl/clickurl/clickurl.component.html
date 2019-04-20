@@ -1,0 +1,12 @@
+<ul>
+  <li (click)="clickchange('Home');" [ngClass]="this.activebutton==='Home'?'backclass':''">Home</li>
+  <li (click)="clickchange('Contact');" [ngClass]="this.activebutton==='Contact'?'backclass':''">Contact</li>
+</ul>
+
+<div>
+  <app-ageless #agelesspart [showhideageless]="showhideageless"></app-ageless>
+</div>
+
+<div>
+  <app-lessvalue #lessvaluepart [showhidelessvalue]="showhidelessvalue"></app-lessvalue>
+</div>

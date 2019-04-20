@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Arraysbindings } from '../../../common/binding';
 import { ToastrService } from 'ngx-toastr';
 export interface lessvalueinterface {
@@ -17,6 +17,7 @@ export interface lessvalueinterface {
     { provide: ToastrService }]
 })
 export class LessvalueComponent implements OnInit {
+  @Input() showhidelessvalue: boolean;
   public sibingobj: lessvalueinterface;
   public sibingInsertObj = {};
   public siblingCountArray = [];

@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" #lessvaluepart *ngIf="showhidelessvalue">
   <div class="p-container">
       <form class="form-inline" #siblingForm="ngForm" novalidate (ngSubmit)="SiblingInsertSubmit(siblingForm.value, siblingForm.valid)" accessible-form>
           <div class="col-md-6  ">
