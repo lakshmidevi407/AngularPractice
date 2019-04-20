@@ -1,0 +1,72 @@
+<div class="container-fluid">
+  <div class="p-container">
+      <form class="form-inline" #siblingForm="ngForm" novalidate (ngSubmit)="SiblingInsertSubmit(siblingForm.value, siblingForm.valid)" accessible-form>
+          <div class="col-md-6  ">
+              <div class="col-md-12 form-group ">
+                  <label class="p-label">No Of Brothers</label>
+                  <div class="controls clearfix" >
+                      <ss-multiselect-dropdown name="noOfBrothers" [options]="siblingCountArray" [texts]="myTexts" [settings]="mysingleSettings" [(ngModel)]="sibingobj.noOfBrothers" #noOfBrothers="ngModel" required (ngModelChange)="siblingcount('brother',sibingobj.noOfBrothers)"></ss-multiselect-dropdown>
+                      <small *ngIf="(noOfBrothers.invalid && siblingForm.submitted) || ((noOfBrothers.valid) && (sibingobj.noOfBrothers!==null && sibingobj.noOfBrothers.toString()===''))" class="text-danger ">
+                            No of brothers required
+                       </small>
+                  </div>
+              </div>
+              <div *ngIf="sibingobj.noOfBrothers!==null && (sibingobj.noOfBrothers)>0">
+                  <div class="col-md-12 form-group ">
+                      <label class="p-label">Elder Brother</label>
+                      <div class="controls clearfix" >
+                          <ss-multiselect-dropdown name="noOfElderBro" [options]="siblingCountArray" [texts]="myTexts" [settings]="mysingleSettings" [(ngModel)]="sibingobj.noOfElderBro" #noOfElderBro="ngModel" required></ss-multiselect-dropdown>
+                          <small *ngIf="(noOfElderBro.invalid && siblingForm.submitted) || ((noOfElderBro.valid) && (sibingobj.noOfElderBro!==null && sibingobj.noOfElderBro.toString()===''))" class="text-danger ">
+                          Elder required
+                          </small>
+                      </div>
+                  </div>
+                  <div class="col-md-12 form-group ">
+                      <label class="p-label">Youger Brother</label>
+                      <div class="controls clearfix" >
+                          <ss-multiselect-dropdown name="noOfYoungerBro" [options]="siblingCountArray" [texts]="myTexts" [settings]="mysingleSettings" [(ngModel)]="sibingobj.noOfYoungerBro" #noOfYoungerBro="ngModel" required></ss-multiselect-dropdown>
+                          <small *ngIf="(noOfYoungerBro.invalid && siblingForm.submitted) || ((noOfYoungerBro.valid) && (sibingobj.noOfYoungerBro!==null && sibingobj.noOfYoungerBro.toString()===''))" class="text-danger ">
+                          Youger required
+                          </small>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-12 form-group ">
+                  <label class="p-label">No Of Sisters</label>
+                  <div class="controls clearfix" >
+                      <ss-multiselect-dropdown name="noOfSisters" [options]="siblingCountArray" [texts]="myTexts" [settings]="mysingleSettings" [(ngModel)]="sibingobj.noOfSisters" #noOfSisters="ngModel" required (ngModelChange)="siblingcount('sister',sibingobj.noOfSisters)"></ss-multiselect-dropdown>
+                      <small *ngIf="(noOfSisters.invalid && siblingForm.submitted) || ((noOfSisters.valid) && (sibingobj.noOfSisters!==null && sibingobj.noOfSisters.toString()===''))" class="text-danger ">
+                          No of Sisters required
+                     </small>
+                  </div>
+              </div>
+              <div *ngIf="sibingobj.noOfSisters!==null && (sibingobj.noOfSisters)>0">
+                  <div class="col-md-12 form-group ">
+                      <label class="p-label">Elder Sisters</label>
+                      <div class="controls clearfix" >
+                          <ss-multiselect-dropdown name="noOfElderSis" [options]="siblingCountArray" [texts]="myTexts" [settings]="mysingleSettings" [(ngModel)]="sibingobj.noOfElderSis" #noOfElderSis="ngModel" required></ss-multiselect-dropdown>
+                          <small *ngIf="(noOfElderSis.invalid && siblingForm.submitted) || ((noOfElderSis.valid) && (sibingobj.noOfElderSis!==null && sibingobj.noOfElderSis.toString()===''))" class="text-danger ">
+                              Elder Sisters required
+                           </small>
+                      </div>
+                  </div>
+                  <div class="col-md-12 form-group ">
+                      <label class="p-label">Younger Sisters</label>
+                      <div class="controls clearfix" >
+                          <ss-multiselect-dropdown name="noOfYoungerSis" [options]="siblingCountArray" [texts]="myTexts" [settings]="mysingleSettings" [(ngModel)]="sibingobj.noOfYoungerSis" #noOfYoungerSis="ngModel" required></ss-multiselect-dropdown>
+                          <small *ngIf="(noOfYoungerSis.invalid && siblingForm.submitted) || ((noOfYoungerSis.valid) && (sibingobj.noOfYoungerSis!==null && sibingobj.noOfYoungerSis.toString()===''))" class="text-danger ">
+                            Younger Sisters required
+                          </small>
+                      </div>
+                  </div>
+              </div>
+              <div class="clearboth"></div>
+          </div>
+              <div class="col-md-12 form-group ">
+                  <button type="submit" class="btn btn-info">Submit</button>
+              </div>
+      </form>
+      <div class="clearboth"></div>
+  </div>
+ 
+</div>

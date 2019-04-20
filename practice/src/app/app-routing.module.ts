@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: './changeurl/changeurl.module#ChangeurlModule'
   },
   {
+    path: 'lessvalue',
+    loadChildren: './lessvalue/lessvalue.module#LessvalueModule'
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full'
