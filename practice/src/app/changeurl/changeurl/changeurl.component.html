@@ -1,0 +1,57 @@
+<div class="col-lg-12 agepadding enterquery1" ng-show="keywordcontrolsallfields">
+  <div class="row">
+   
+    <br>
+    <div class="edit_pages_sidebar_key clearfix">
+      <div class="edit_pages_sidebar_menu_key clearfix">
+        <ul id="keywordlinkspart">
+          <li><a  (click)="customerdetails('Customer');" [ngClass]="this.activebutton==='Customer'?'backclass':''">Candidate Details</a></li>
+          <li><a  (click)="customerdetails('father');" [ngClass]="this.activebutton==='father'?'backclass':''">Father Details</a></li>
+          <li><a  (click)="customerdetails('mother');" [ngClass]="this.activebutton==='mother'?'backclass':''" >Mother Details</a></li>
+          <li><a  (click)="customerdetails('spouse');" [ngClass]="this.activebutton==='spouse'?'backclass':''" >Spouse Details</a></li>
+          <li><a  (click)="customerdetails('allfields');" [ngClass]="this.activebutton==='allfields'?'backclass':''" >All Fields</a></li>
+          <li><a  (click)="customerdetails('cbrother');" [ngClass]="this.activebutton==='cbrother'?'backclass':''" >Candidate Brother</a></li>
+          <li><a  (click)="customerdetails('csister');" [ngClass]="this.activebutton==='csister'?'backclass':''" >Candidate Sister</a></li>
+          <li><a  (click)="customerdetails('fbsister');" [ngClass]="this.activebutton==='fbsister'?'backclass':''" >Father Brother&Sister</a></li>
+          <li><a  (click)="customerdetails('mbsister');" [ngClass]="this.activebutton==='mbsister'?'backclass':''" >Mother Brother&Sister</a></li>
+          <li><a  (click)="customerdetails('reference');" [ngClass]="this.activebutton==='reference'?'backclass':''">Reference</a> </li>
+          <li><a  (click)="customerdetails('partner');" [ngClass]="this.activebutton==='partner'?'backclass':''">Partner</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-2 listtrue" *ngIf="customergrid==='1'? true: false">
+      <h1>Personal Details</h1>
+    </div>
+    <div class="col-lg-3 listtrue1" *ngIf="customergrid==='2'? true: false">
+      <h1>Father Details</h1>
+    </div>
+    <div class="col-lg-3 listtrue1" *ngIf="customergrid==='3'? true: false">
+      <h1 class="mdetails">Mother Details</h1>
+    </div>
+    <div class="col-lg-3" *ngIf="customergrid==='4'? true: false">
+      <h1>Spouse Details</h1>
+    </div>
+    <div class="col-lg-3 listtrue13" *ngIf="customergrid==='5'? true: false">
+      <h1 class="mdetails">All Fields</h1>
+    </div>
+    <div class="col-lg-3 listtrue2" *ngIf="customergrid==='6'? true: false">
+      <h1>Customer Brother 1</h1>
+    </div>
+    <div class="col-lg-3 listtrue2" *ngIf="customergrid==='7'? true: false">
+      <h1 class="mdetails">Customer Sister 1</h1>
+    </div>
+    <div class="col-lg-3 listtrue3" *ngIf="customergrid==='8'? true: false">
+      <h1>Father Brother</h1>
+    </div>
+    <div class="col-lg-3 listtrue3" *ngIf="customergrid==='9'? true: false">
+      <h1 class="mdetails">Mother Brother</h1>
+    </div>
+    <div class="col-lg-3 listtrue5" *ngIf="customergrid==='10'? true: false">
+      <h1>Reference</h1>
+    </div>
+    <div class="col-lg-3 listtrue16" *ngIf="customergrid==='11'? true: false">
+      <h1 class="mdetails">Partner 1</h1>
+    </div>
+   
+  </div>
+</div>
