@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: './lessvalue/lessvalue.module#LessvalueModule'
   },
   {
+    path: 'ageless',
+    loadChildren: './ageless/ageless.module#AgelessModule'
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full'

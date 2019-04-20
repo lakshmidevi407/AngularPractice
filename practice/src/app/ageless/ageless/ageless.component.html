@@ -1,0 +1,37 @@
+<div class="container-fluid p-backcolor" id="partnerpreferid">
+       
+        <form #PartnerpreferenceForm="ngForm" novalidate (ngSubmit)="Partnerpreferencesubmit(PartnerpreferenceForm.value,PartnerpreferenceForm.valid)">
+            <div class="col-md-6 p-align p-padding1">
+                <div class="col-md-12 form-group p-margin p-padding">
+                    <label class="p-label">Age <span class="p-imp">*</span></label>
+                    <div id="preparepart">
+                        <ss-multiselect-dropdown name="selectagefrm" [options]="selectagefrmarray" [texts]="mysingleTexts" [settings]="mysingleSettings" [(ngModel)]="partnerpreferenceobj.selectagefrm" #selectagefrm="ngModel" required (ngModelChange)="partnerprefenceage(partnerpreferenceobj.selectagefrm,partnerpreferenceobj.selectageto,'age')"></ss-multiselect-dropdown>
+                    </div>
+                    <div id="preparepart">
+                        <ss-multiselect-dropdown name="selectageto" [options]="selectagefrmarray" [texts]="mysingleTexts" [settings]="mysingleSettings" [(ngModel)]="partnerpreferenceobj.selectageto" #selectageto="ngModel" required (ngModelChange)="partnerprefenceage(partnerpreferenceobj.selectagefrm,partnerpreferenceobj.selectageto,'age')"></ss-multiselect-dropdown>
+                    </div>
+                    <small *ngIf="(selectagefrm.invalid && PartnerpreferenceForm.submitted) ||((selectagefrm.valid) && (partnerpreferenceobj.selectagefrm!==null  && partnerpreferenceobj.selectagefrm.toString()==='')) || (selectageto.invalid && PartnerpreferenceForm.submitted) ||((selectageto.valid) && (partnerpreferenceobj.selectageto!==null && partnerpreferenceobj.selectageto.toString()===''))"
+                        class="text-danger partnerrequired ageprequired">
+                        Age is required.
+                    </small>
+                </div>
+                <div class="col-md-12 form-group p-margin p-padding">
+                    <label class="p-label">Height<span class="p-imp">*</span></label>
+                    <div id="preparepart">
+                        <ss-multiselect-dropdown name="heightfrm" [options]="heightarray" [texts]="mysingleTexts" [settings]="mysingleSettings" [(ngModel)]="partnerpreferenceobj.heightfrm" #heightfrm="ngModel" required (ngModelChange)="partnerprefenceage(partnerpreferenceobj.heightfrm,partnerpreferenceobj.heightto,'height')"></ss-multiselect-dropdown>
+                    </div>
+                    <div id="preparepart">
+                        <ss-multiselect-dropdown name="heightto" [options]="heightarray" [texts]="mysingleTexts" [settings]="mysingleSettings" [(ngModel)]="partnerpreferenceobj.heightto" #heightto="ngModel" required (ngModelChange)="partnerprefenceage(partnerpreferenceobj.heightfrm,partnerpreferenceobj.heightto,'height')"></ss-multiselect-dropdown>
+                    </div>
+                    <small *ngIf="(heightfrm.invalid && PartnerpreferenceForm.submitted) ||((heightfrm.valid) && (partnerpreferenceobj.heightfrm!==null && partnerpreferenceobj.heightfrm.toString()==='')) || (heightto.invalid && PartnerpreferenceForm.submitted) ||((heightto.valid) && (partnerpreferenceobj.heightto!==null && partnerpreferenceobj.heightto.toString()===''))"
+                        class="text-danger partnerrequired ageprequired">
+                        Height is required.
+                     </small>
+                </div>
+                <div class="col-md-12 form-group p-margin p-padding">
+                  <label class="p-label"></label>
+                  <button type="submit" class="btn btn-info submit_btn">Submit</button>
+                </div>
+         </div>
+        </form>
+</div>
